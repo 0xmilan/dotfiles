@@ -1,0 +1,38 @@
+# remove printer stuff, bluetooth, etc. (sp -Rs)
+xfburn
+xfce4-power-manager
+matcha-gtk-theme
+hplip
+manjaro-printer
+system-config-printer
+volumeicon
+blueman
+bluez-libs
+bluez-utils
+sbc 
+bauh
+manjaro-hello
+
+
+# install basic stuff (sp -Syu)
+gthumb
+tumbler
+gpick
+tmux
+bind-tools
+net-tools
+nikto
+jre-openjdk
+
+
+run install_pulse - autospawn(?) has to be commented in /etc/pulse/client.conf
+
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions --depth 1
+
+git clone https://github.com/zdharma/fast-syntax-highlighting ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/fast-syntax-highlighting --depth 1
+
+
+
+bmenu
+pcmanfm vs thunar?
+morc-menu alt-z

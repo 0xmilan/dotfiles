@@ -1,0 +1,82 @@
+# enable color support of ls and also add handy /aliases
+if [ -x /usr/bin/dircolors ]; then
+    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+    alias ls='ls --color=auto --group-directories-first'
+
+    alias grep='grep --color=auto'
+    alias fgrep='fgrep --color=auto'
+    alias egrep='egrep --color=auto'
+fi
+
+alias l='ls -lhF'
+alias ll='ls -lhF'
+alias la='ls -lhaF'
+
+alias night='redshift -l 47.5:19.0 -t 6500:6500 -b 0.5:0.5 -v -o -P'
+alias nightlight='redshift -l 47.5:19.0 -t 6500:6500 -b 0.7:0.7 -v -o -P'
+alias nightlightred='redshift -l 47.5:19.0 -t 3500:3500 -b 0.7:0.7 -v -o -P'
+alias nightdark='redshift -l 47.5:19.0 -t 3500:3500 -b 0.3:0.3 -v -o -P'
+alias nightred='redshift -l 47.5:19.0 -t 3500:3500 -b 0.5:0.5 -v -o -P'
+alias day='redshift -l 47.5:19.0 -t 6500:6500 -b 1.0:1.0 -v -o -P'
+alias dayred='redshift -l 47.5:19.0 -t 3500:3500 -b 1.0:1.0 -v -o -P'
+
+alias backup='rsync -av --delete /home/mm/notes /run/media/mm/HDD750'
+alias bp='inxi -xxxw'
+alias bpgraf='curl wttr.in/budapest -s | head -n -2'
+alias pecsgraf='curl wttr.in/pecs -s | head -n -2'
+alias r='ranger'
+alias v='vim'
+alias c='clear'
+alias t='trans :hu'
+alias te='trans'
+alias x='viewnior'
+alias p='epdfview'
+alias cd..='cd ..'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias .....='cd ../../../..'
+alias cd-='cd -'
+alias ch='cd /run/media/mm/HDD750'
+alias cs='cd /run/media/mm/SSD250/home/mm'
+alias cw='cd /var/www/html' 
+alias mkd='mkdir -pv'
+mkcd() { mkdir -pv $1 ; cd $1 ;}
+alias pls='sudo'
+alias plz='sudo $(history -p !!)'
+alias bc='bc -l'
+
+alias sp='sudo pacman'
+
+alias p100='ping 192.168.100.1'
+alias p1='ping 192.168.1.1'
+alias pg='ping google.com' 
+
+alias firefox='~/dl/firefox/firefox'
+alias ffdev='~/dl/firefoxdev/firefox' 
+
+alias urldecode='python -c "import sys, urllib as ul; print(ul.unquote_plus(sys.argv[1]))"'
+alias urlencode='python -c "import sys, urllib as ul; print(ul.quote_plus(sys.argv[1]))"'
+
+alias pp='python -m json.tool'
+
+alias port="httprobe -p http:8000 -p http:8080 -p https:8443 -p http:8081 -p http:8082 -p http:8083 -p http:8084 -p http:8085 -p http:8086 -p http:8087 -p http:8088 -p http:8089 -p http:8888 -p http:81 -p http:3000 -p http:10000 -p https:9443 -p https:10443"
+
+alias y='youtube-dl -f bestaudio --extract-audio --audio-format mp3 -o "%(title)s.%(ext)s"'
+alias wanip='dig +short myip.opendns.com @208.67.220.220'
+alias scpm='scp sr:~/motion/\*.jpg ~/motion/'
+
+a() { eval adb shell input text \"$@\" && adb shell input tap 1000 1400; }
+an() { eval adb shell input text \"$@\"; }
+
+awsls() { aws s3 ls s3://$1; }
+awscp() { aws s3 cp s3://$1 .; }
+alias awsacl='aws s3api get-bucket-acl --bucket'
+
+d2g() { firefox https://groups.google.com/a/$1/forum/#!forumsearch; }
+
+case "$-" in *i*) ;; *) return ;; esac
+# [ -z "$PS1" ] && return
+cd() { builtin cd "$@" && ls -lhF; }
+
+thirdline(){ awk '{if (NR%3==0){print "\033[32m" $0 "\033[0m"} else{print}}'; }
