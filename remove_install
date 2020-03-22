@@ -23,7 +23,8 @@ bind-tools
 net-tools
 nikto
 jre-openjdk
-
+zip
+unzip
 
 run install_pulse - autospawn(?) has to be commented in /etc/pulse/client.conf
 
