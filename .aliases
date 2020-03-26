@@ -55,8 +55,8 @@ alias pg='ping google.com'
 alias firefox='~/dl/firefox/firefox'
 alias ffdev='~/dl/firefoxdev/firefox' 
 
-alias urldecode='python -c "import sys, urllib as ul; print(ul.unquote_plus(sys.argv[1]))"'
-alias urlencode='python -c "import sys, urllib as ul; print(ul.quote_plus(sys.argv[1]))"'
+alias urldecode='python -c "import sys, urllib.parse ; print(urllib.parse.unquote(sys.argv[1]))"'
+alias urlencode='python -c "import sys, urllib.parse ; print(urllib.parse.quote(sys.argv[1]))"'
 
 alias pp='python -m json.tool'
 
