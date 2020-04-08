@@ -25,6 +25,7 @@ nikto
 jre-openjdk
 zip
 unzip
+go
 
 run install_pulse - autospawn(?) has to be commented in /etc/pulse/client.conf
 

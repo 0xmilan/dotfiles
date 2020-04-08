@@ -87,7 +87,7 @@ export NO_AT_BRIDGE=1
 export BROWSER=/home/mm/dl/firefox/firefox
 
 export GOPATH=$HOME/tools/go-workspace
-export GOROOT=/usr/local/go
+export GOROOT=/usr/lib/go
 
 export PATH="$PATH:/usr/local/go/bin"
 export PATH="$PATH:$GOPATH/bin"
