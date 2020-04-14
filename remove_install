@@ -1,7 +1,6 @@
 # remove printer stuff, bluetooth, etc. (sp -Rs)
 xfburn
 xfce4-power-manager
-matcha-gtk-theme
 hplip
 manjaro-printer
 system-config-printer
@@ -12,6 +11,9 @@ bluez-utils
 sbc 
 bauh
 manjaro-hello
+mousepad
+manjaro-application-utility
+pamac-cli pamac-common pamac-gtk
 
 
 # install basic stuff (sp -Syu)
@@ -26,6 +28,7 @@ jre-openjdk
 zip
 unzip
 go
+android-tools
 
 run install_pulse - autospawn(?) has to be commented in /etc/pulse/client.conf
 
