@@ -14,7 +14,7 @@ manjaro-hello
 mousepad
 manjaro-application-utility
 pamac-cli pamac-common pamac-gtk
-
+bmenu
 
 # install basic stuff (sp -Syu)
 gthumb
@@ -29,6 +29,9 @@ zip
 unzip
 go
 android-tools
+virt-manager
+lsof
+lshw
 
 run install_pulse - autospawn(?) has to be commented in /etc/pulse/client.conf
 
